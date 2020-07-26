@@ -1,5 +1,13 @@
 # Project Origin
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
+
 Project Origin is a prototype project where the goal is to document the origin of electricity on the same resolution as the electricity market, currently hourly.
 
 If you want some of the [Background info for the project it can be found here](background.md)
