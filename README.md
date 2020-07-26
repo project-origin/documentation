@@ -1,22 +1,37 @@
 # Project Origin
 
+Project Origin is an Energinet prototype-project with the goal of providing a way to prove
+the origin of consumed electricity. It uses the same resolution as the electricity market,
+currently hourly, instead of the yearly resolution used by the current Guarantee of Origin system (GO),
+hence we call it Granular Guarantee of Origin (GGO).
+
+The active prototype is currently scheduled to run until November 2020, where the goal is
+to learn and further develop the prototype, and to harvest all the learned experiences into
+a possibly future production solution. We welcome as many participants and feedback as possible.
+We will do our best to incorporate feedback into improving the prototype as fast as possible.
+
 ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+- Tilføj link til signup (eloprindelse.dk)?
 ```
 
-Project Origin is a prototype project where the goal is to document the origin of electricity on the same resolution as the electricity market, currently hourly.
+Key features of the prototype include:
 
-If you want some of the [Background info for the project it can be found here](background.md)
+- Issuing of GGOs based on actual energy production
+- Setting up transfer agreements to [continuously] transfer issued GGOs to trading partners
+- Retiring of GGOs to prove the origin of consumed energy
+- Generating environment declaration based on retired GGOs, including detailed emission data and source technology
 
-Early in the project a series of [Core decisions](core-decisions.md) was made.
+If you want some of the [Background info for the project it can be found here](background.md).
+
+Early in the project a series of [Core decisions](core-decisions.md) were made.
 
 You can find more about the [architecture here](architecture.md).
 
 # Eloprindelse
+
+```diff
+- Forstår ikke lige helt det første paragraf i det her afsnit. Har flytet de andre paragraffer op i første afsnit ovenfor.
+```
 
 This project is the basis for the active Danish prototype of the platform called [Eloprindelse](http://eloprindelse.dk). 
 
