@@ -37,6 +37,12 @@ An example application has also been created, this application uses many of the 
 
 TODO: Afhængighed fra ledger til "Public services" er forkert - pilene bør kun pege fra services til ledger og ikke den anden vej rundt.
 
+# <a id="datahub-service">Shared verifiable storage (blockchain)</a>
+
+At the core of the platform is the blockchain. It is intended to be the single source of truth where end-users, third-parties, etc. can verify GGOs. In this prototype, it is currently implemented using Hyperledger Sawtooth, but a replacement is already under way.
+
+The blockchain is [detailed in this document ](blockchain-protocols.md).
+
 # <a id="datahub-service">DataHubService</a>
 
 This service is responsible for bridging the danish DataHub with the rest of the platform. DataHub exposes metering points and measurements from the danish consumers via an API, and DataHubService uses this to fetch data for the platform's users. It imports measurements from DataHub and publishes them to the blockchain while at the same time issues GGOs to the blockchain for production meters.
