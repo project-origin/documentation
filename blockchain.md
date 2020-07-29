@@ -69,7 +69,7 @@ We are currently looking into how this can be done in the best way, while still 
 
 # Issues with using a blockchain
 
-Since the ownership of a GGO depends on having access to the private keys for the address on the ledger, there arises the issue if an owner loses his wallet and keys, or if the become compromised.
+Since the ownership of a GGO depends on having access to the private keys for the address on the ledger, there arises the issue if an owner loses their wallet/keys, or if they become compromised.
 
 There is no sure way for the issuing bodies to know who owns a specific GGO, and has no ability to verify it if the owner lost their key, so there is no way for the issuing body to grant the owner access to their GGOs again.
 
@@ -77,17 +77,15 @@ This is the same issue as exists on other blockchains when the owner looses thei
 
 # Learnings of trust and blockchain
 
-If you have read the part about [trust](Trust.md), you will notice we go into that the ledger itself does not solve the issue on how to trust data from the physical world and move it to the digital world, a trust framework is needed for this.
+If you have read [the part about trust](Trust.md), you will notice we highlight that the ledger itself does not solve the issue on how to trust data from the physical world and move it to the digital world, thus a trust framework is needed for this. In other words, we have to create trust to the meters and other writers to the ledger, so we know what they are writing is indeed trustworthy.
 
-In other words, we have to create trust to the meters and other writers to the ledger, so we know what they are writing is indeed trustworthy.
+When we then revisit the flowchart (above) and go through it again with these learnings, we come to a new result.
 
-When we then revisit the flowchart and go through it again with these learnings, we come to a new result.
-
-At point 5. Are all writers trusted? We can now answer yes.
+At point 5: Are all writers trusted? We can now answer yes.
 
 This results in their work telling us we shouldn't use a blockchain.
 
-This also helps with the scalability we mentioned earlier.
+Using another implementation than a blockchain also helps with the scalability issues mentioned earlier.
 
 # Current chose
 
