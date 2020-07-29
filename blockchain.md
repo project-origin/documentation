@@ -35,11 +35,9 @@ Using Public Permissioned Blockchain allows the central parties to control the c
 
 ### Transactions fees
 
-Since we are dealing with micro transactions, there cannot be a fee for each transaction, since this would hinder the free movement of the GGOs. 
+As we are dealing with micro-transactions, there cannot be a fee on each transaction, since this would otherwise hinder the free movement of the GGOs. This directly limits what sort of blockchains can be used, since those based on PoW ([Proof-of-Work](https://en.wikipedia.org/wiki/Proof_of_work)) and transaction fees are no longer relevant options.
 
-This directly limits what sort of blockchains can be used, since those based on PoW and transaction fees are no longer relevant.
-
-Using Public Permissioned Blockchain allows to the use of other consensus algorithms tat are not as resource intensive, which in turn removes the need ot transactions fees.
+Using Public Permissioned Blockchain allows the use of other consensus algorithms that are less resource intensive, thus in turn removes the need of transactions fees.
 
 ### Anonymity
 
