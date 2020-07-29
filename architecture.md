@@ -191,9 +191,9 @@ Example of Offshore Wind Power:
 
 This field is used to describe what has happened with the GGO (or the current state, if you will).
 
-A value of null indicates that the GGO has not been used (ie. is pristine).
+A value of null indicates that the GGO has not been used (ie. is pristine). When any action on the GGO is done, the field is set with an object.
 
-When any action on the GGO is done, the field is set with an object. The action property can be one of three possible values: TRANSFER, SPLIT, or RETIRE - each denoting what sort of action was performed.
+The action property can be one of three possible values: TRANSFER, SPLIT, or RETIRE - each denoting what sort of action was performed.
 
 The addresses property contains a list of addresses on the ledger where the GGO was used:
 
@@ -203,7 +203,7 @@ The addresses property contains a list of addresses on the ledger where the GGO 
 
 ## Settlement
 
-The settlement object is the way we document what GGOs has been retired to a specific measurement.
+The Settlement object is the way we document which GGOs have been retired to a specific measurement.
 
     {
         "measurement": "%address to a consumption measurement%"
