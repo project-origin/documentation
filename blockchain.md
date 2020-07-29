@@ -83,9 +83,7 @@ When we then revisit the flowchart (above) and go through it again with these le
 
 At point 5: Are all writers trusted? We can now answer yes.
 
-This results in their work telling us we shouldn't use a blockchain.
-
-Using another implementation than a blockchain also helps with the scalability issues mentioned earlier.
+This result is telling us we should not use a blockchain. Using another implementation than a blockchain also helps with the scalability issues mentioned earlier.
 
 # Current chose
 
