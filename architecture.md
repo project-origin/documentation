@@ -18,8 +18,6 @@ architectural design
 
 # Architectural Overview
 
-**TODO List all repositories**
-
 This document outlines the overall architecture of the implemented prototype platform.
 
 ![Archictechtural overview](figures/arch-overview.png)
@@ -35,8 +33,6 @@ At the core of the platform is the blockchain. It is intended to be the single s
 The blockchain is [detailed in this document ](blockchain-protocols.md).
 
 Furthermore, [a Python library](https://github.com/project-origin/ledger-sdk-python) has been developed to enable easy integration with blockchain.
-
-TODO describe Origin-Ledger-SDK.
 
 # <a id="datahub-service">DataHubService</a>
 
