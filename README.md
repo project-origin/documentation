@@ -33,7 +33,7 @@ Sign up is open for everyone to try the example application at [Eloprindelse.dk]
   - Setting up an API token
   - Integrating with the blockchain
 
-# Cooperation
+## Cooperation
  
 This project is open-source, and our wish is for everyone interested to be part of the project and platform.
 
