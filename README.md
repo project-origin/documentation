@@ -27,7 +27,7 @@ Sign up is open for everyone at [Eloprindelse.dk](https://eloprindelse.dk).
   - Limitations
 - Prototype implementation
   - [Architectural overview](architecture.md)
-  - [Shared verifiable storage (blockchain) protocols](blockchain-protocols.md)
+  - [Blockchain protocols and implementation](blockchain-protocols.md)
 
 # Eloprindelse
 
