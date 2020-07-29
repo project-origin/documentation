@@ -37,19 +37,19 @@ An example application has also been created, this application uses many of the 
 
 # <a id="verifiable-storage">Shared verifiable storage</a>
 
-This is the core part of the platform, where all the measurements and GGOs are persisted and verifiable.
+This is the core part of the platform, where all measurements and GGOs are persisted and are verifiable.
 
-This is currently based on a blockchain, [as explained here.](blockchain.md) The current blockchain is Hyperledger Sawtooth, set up in a private permissioned configuration. 
+This is currently based on a blockchain, [as explained here](blockchain.md). The current blockchain is [Hyperledger Sawtooth](https://www.hyperledger.org/use/sawtooth) set up in a private permissioned configuration. 
 
-The intent is for the blockchain to be Public Permissioned, but because of privacy concerns the public part is currently disabled in the platform. It is hard to insure privacy when there is low number of actors on the blockchain, similar to hiding a needle in a haystack of two straws.
+The intent is for the blockchain to be Public Permissioned, but because of privacy concerns the public part is currently disabled in the platform. It is hard to insure privacy when there is a low number of actors on the blockchain, similar to hiding a needle in a haystack of two straws.
 
-Since the original designs, and some of the considerations highlighted in the [trust section](trust.md), we are currently looking at alternative, this could be something like IOTA or moving the data off ledger while insuring it is verifiable.
+Since the initial design, and after some of the considerations highlighted in the [trust section](trust.md), we are currently looking at alternative to Hyperledger Sawtooth. This could be something like IOTA, or moving the data off ledger entirely while insuring its verifiability.
 
 ## Ownership
 
-For owners of the each meter to be able to prove their ownership of an address, which can contain either a measurement or GGO, a public-private key-set is used. Any to an address on the ledger is signed with the corresponding private key, which can be validated as the owner performing an operation. To not be able to correlate ownership of addresses, a new public key is used for every single address. 
+All blocks on the ledger are signed with a private key for owners to be able to prove their ownership of the block, which can contain either a measurement or a GGO. The signed block can be validated as the owner writing the block (transaction) using their public key.
 
-Storing all of these private keys, would be very costly for the client, but BitCoin created a solution, <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32</a> which enables us to deterministic create public/private keys for each block. It further enables us to give an extended public key to the party creating the blocks, so they can continuously create blocks where only the owner has write access over.
+[BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) (developed by the BitCoin community) enables us to deterministic create unique public/private keys for every single block. This prevents the public from correlate ownership of blocks on the ledger, thus increasing anonymity without hiding data in the block. BIP32 further enables us to give an extended public key to the party creating the blocks, so they can continuously create blocks where only the owner has write access over.
 
 The extended key is also used to generate the corresponding addresses. More on this in the [DataHub service]('TODO')
 
