@@ -1,3 +1,8 @@
+# Content
+
+- [Ownership](#ownership)
+- [Namespace and addressing](#namespace-and-addressing)
+
 # Blockchain protocols and implementation
 
 The blockchain is the core part of the platform, where all measurements, GGOs, and Settlements are persisted and are publicly verifiable. Details on the reasoning behind using a blockchain [are explained here](blockchain.md).
@@ -8,7 +13,7 @@ The intent is for the blockchain to be Public Permissioned, but because of priva
 
 Since the initial design, and after some of the considerations highlighted in the [trust section](trust.md), we are currently looking at alternative to Hyperledger Sawtooth. This could be something like IOTA, or moving the data off ledger entirely while insuring its verifiability.
 
-## Ownership
+## <a name="ownership"></a>Ownership
 
 All blocks on the ledger are signed with a private key for owners to be able to prove their ownership of the block, which can contain either a measurement or a GGO. The signed block can be validated as the owner writing the block (transaction) using their public key.
 
@@ -16,7 +21,7 @@ All blocks on the ledger are signed with a private key for owners to be able to 
 
 The extended key is also used to generate the corresponding addresses. More on this in the [DataHub service]('TODO').
 
-## Namespace and addressing
+## <a name="namespace-and-addressing"></a> Namespace and addressing
 
 In Hyperledger Sawtooth it is possible to isolate different parts of a system in namespaces. The first three bytes of each address denotes the namespace. Currently the platform uses three namespaces: one for measurements, one for GGOs, and one for settlements.
 
@@ -168,6 +173,8 @@ The addresses property contains a list of addresses on the ledger where the GGO 
 
 The Settlement object is the way we document which GGOs have been retired to a specific measurement.
 
+Below is an example of a formatted JSON body of a block:
+
     {
         "measurement": "%address to a consumption measurement%"
         "parts" : [
@@ -186,11 +193,13 @@ The Settlement object is the way we document which GGOs have been retired to a s
 
 This field is a reference to the consumption measurement, it is not needed strictly needed, since the measurement has the same address but in a different namespace.
 
+TODO Er det ikke "strictly needed"? Er der ikke nødvendigt for at transaction processoren accepterer transaktionen?
+
 ### Parts
 
-Each part in the list is a GGO retired to the settlement. The amount is included so that it is not necessary to read all address to calculate wether the total is larger than the measurement, since it is not allowed to retire more GGOs to a measurement, than the amount of electricity used.
+Each part in the list represents a GGO retired to the measurement. When a GGO is retired to a measurement it is added to an existing Settlement block if one exists, otherwise a new block is created.
 
-But every time a GGO is retired to a measurement it is added here but the transaction processors.
+The amount is included so that it is not necessary to read all GGO's addresses to calculate whether the total is larger than the measurement, since it is not allowed to retire more GGOs to a measurement than the amount of electricity consumed. Also, the amount has to match that of the originating GGO.
 
 ## Transaction Processors
 
