@@ -24,8 +24,8 @@ Sign up is open for everyone at [Eloprindelse.dk](https://eloprindelse.dk).
   - [Core decisions made early](core-decisions.md)
   - [Should we use blockchain?](blockchain.md)
   - [Verifiable and trustworthy](trust.md)
-  - Further possibilities
-  - Limitations
+  - [Further possibilities](further-possibilities.md)
+  - [Limitations](limitations.md)
 - Prototype implementation
   - [Architectural overview](architecture.md)
   - [Blockchain protocols and implementation](blockchain-protocols.md)
