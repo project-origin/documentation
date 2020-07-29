@@ -18,6 +18,8 @@ architectural design
 
 # Architectural Overview
 
+**TODO List all repositories**
+
 Here we will outline an overview of the architecture.
 
 At the core of the platform is the [shared verifiable storage (blockchain)](blockchain-protocols.md). The blockchain is intended to be a common place where end-users can verify their GGOs. In this prototype, this is currently implemented using Hyperledger Sawtooth, but a replacement is already under way.
