@@ -77,7 +77,7 @@ This is the same issue as exists on other blockchains when the owner looses thei
 
 # Learnings of trust and blockchain
 
-If you have read [the part about trust](trust.md), you will notice we highlight that the ledger itself does not solve the issue on how to trust data from the physical world and move it to the digital world, thus a trust framework is needed for this. In other words, we have to create trust to the meters and other writers to the ledger, so we know what they are writing is indeed trustworthy.
+If you have read [the part about trust](trust.md), you will notice we highlight that the blockchain itself does not solve the issue on how to trust data from the physical world and move it to the digital world, thus a trust framework is still needed for this. In other words, we have to create trust to the meters and other writers to the ledger, so we know what they are writing is indeed trustworthy.
 
 When we then revisit the flowchart (above) and go through it again with these learnings, we come to a new result.
 
