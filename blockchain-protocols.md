@@ -2,6 +2,8 @@
 
 This document details the data structures, naming convetions and more used in the blockchain implementation.
 
+TODO describe Origin-Ledger-SDK.
+
 ## Content
 
 - [Introduction](#introduction)
