@@ -1,8 +1,8 @@
 # Blockchain protocols and implementation
 
-The blockchain is the core part of the platform, where all measurements and GGOs are persisted and are verifiable.
+The blockchain is the core part of the platform, where all measurements, GGOs, and Settlements are persisted and are publicly verifiable. Details on the reasoning behind using a blockchain [are explained here](blockchain.md).
 
-This is currently based on a blockchain, [as explained here](blockchain.md). The current blockchain is [Hyperledger Sawtooth](https://www.hyperledger.org/use/sawtooth) set up in a private permissioned configuration. 
+The current blockchain technology used is [Hyperledger Sawtooth](https://www.hyperledger.org/use/sawtooth) set up in a private permissioned configuration. 
 
 The intent is for the blockchain to be Public Permissioned, but because of privacy concerns the public part is currently disabled in the platform. It is hard to insure privacy when there is a low number of actors on the blockchain, similar to hiding a needle in a haystack of two straws.
 
