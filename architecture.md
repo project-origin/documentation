@@ -20,9 +20,9 @@ architectural design
 
 Here we will outline an overview of the architecture.
 
-At the core of the platform is the [shared verifiable storage](#verifiable-storage). The shared verifiable storage is intended to be a common place where end-users can verify their GGOs. In the prototype, this is currently done by Hyperledger Sawtooth, but a replacement is already under way.
+At the core of the platform is the [shared verifiable storage (blockchain)](blockchain-protocols.md). The blockchain is intended to be a common place where end-users can verify their GGOs. In this prototype, this is currently implemented using Hyperledger Sawtooth, but a replacement is already under way.
 
-In the Danish Setup there is a [DataHub Service](#datahub-service). The responsibility for this service is to bridge the DataHub and its measurements with the platform, and add data to the verifiable storage. This could also be replaced with a decentralized solution to let meters write directly to the verifiable storage if a issuing body so wishes.
+In the Danish Setup there is a [DataHub Service](#datahub-service). The responsibility for this service is to bridge the danish DataHub and its measurements with the prototype, and add data to the verifiable storage. This could also be replaced with a decentralized solution to let meters write directly to the verifiable storage if a issuing body so wishes.
 
 Next public service is the [Account Service](#account-service), this was original an way to abstract away the complexity of dealing directly with the ledger, wallet and keys to a more friendly account API. But there are considerations about making it the central access entry-point to the platform. 
 
@@ -37,9 +37,11 @@ An example application has also been created, this application uses many of the 
 
 TODO: Afhængighed fra ledger til "Public services" er forkert - pilene bør kun pege fra services til ledger og ikke den anden vej rundt.
 
-# <a id="datahub-service">DataHub service</a>
+# <a id="datahub-service">DataHubService</a>
 
-!todo!
+This service is responsible for bridging the danish DataHub with the rest of the platform. DataHub exposes metering points and measurements from the danish consumers via an API, and DataHubService uses this to fetch data for the platform's users. It imports measurements from DataHub and publishes them to the blockchain while also issues GGOs to the blockchain for production meters.
+
+DataHubService is [open-source and can be found on GitHub.com](https://github.com/project-origin/datahub-service).
 
 # <a id="account-service">Accounts service</a>
 
