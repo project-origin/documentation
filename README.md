@@ -31,6 +31,7 @@ Sign up is open for everyone to try the example application at [Eloprindelse.dk]
   - [Blockchain protocols and implementation](blockchain-protocols.md)
 - Third-party integration
   - Setting up an API token
+  - Hello World examples
   - Integrating with the blockchain
 
 ## Cooperation
