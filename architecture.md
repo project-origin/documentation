@@ -32,7 +32,7 @@ At the core of the platform is the blockchain. It is intended to be the single s
 
 The blockchain is [detailed in this document ](blockchain-protocols.md).
 
-Furthermore, [a Python library](https://github.com/project-origin/ledger-sdk-python) has been developed to enable easy integration with blockchain.
+Furthermore, [a Python library](https://github.com/project-origin/ledger-sdk-python) has been developed to enable easy integration with the project's blockchain.
 
 # <a id="datahub-service">DataHubService</a>
 
