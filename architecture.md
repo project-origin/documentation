@@ -113,7 +113,9 @@ The owner can prove the originating GSRN of a measurement by granting access to 
 
 ## GGO - Granular Guarantee of Origin
 
-Every GGO in the platform denotes the origin of an amount of electricity. Each GGO is issued with a reference to the production measurement where it was created.
+Every GGO in the platform denotes the origin of an amount of electricity produced. Each GGO is issued with a reference to the production measurement its based upon.
+
+Below is an example of a formatted JSON body of a block:
 
 
     {
@@ -131,9 +133,11 @@ Every GGO in the platform denotes the origin of an amount of electricity. Each G
 
 This field always contains an address on the ledger where this GGO originated. There is two difference types of GGO origin.
 
-First possibility is from a measurement, so it will contain the address of the measurement. The amount, begin, end and sector will always be of equal value in this instance.
+The first possibility is that the GGO was issued based on a production measurement. In this case the "origin" will contain the address of the measurement, and the amount, begin, end, and sector will always be equal to the values of the measurement.
 
-Second possibility is the address of another GGO, this will be the case if an GGO has been transferred or split into smaller GGOs. If it is a transfer, then amount, begin, end and sector must still be equal. If it is a split, thin the amount would be a smaller amount than the original.
+The second possibility is that the GGO is a result of another GGO being transferred or split into smaller GGOs. In this case the "origin" will contain the address of the parent GGO. If it is a transferred GGO, then amount, begin, end and sector must still be equal to its parent. If it is a split, then amount would be a smaller amount than its parent, but begin, end, and sector must be equal to its parent.
+
+It is possible to distinguish between these two possibilities by looking at the namespace of the origin.
 
 ### <a id="ggo-time">Begin and End</a>
 In Project Origin we chose each GGOs to have a predetermined length of time (Market resolution) instead of a predetermined size (GO 1 MWh)
