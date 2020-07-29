@@ -140,28 +140,21 @@ The second possibility is that the GGO is a result of another GGO being transfer
 It is possible to distinguish between these two possibilities by looking at the namespace of the origin.
 
 ### <a id="ggo-time">Begin and End</a>
-In Project Origin we chose each GGOs to have a predetermined length of time (Market resolution) instead of a predetermined size (GO 1 MWh)
+In Project Origin we chose each GGOs to have a predetermined length of time (Market resolution) instead of a predetermined size (GO 1 MWh).
 
 The reasoning behind locking the length of each GGO is that electricity is volatile and only exists while it is produced, temporal correlation between production and consumption is therefore of high importance.
 
-The graft below shows the renewable production for the 3. and 4. of april 2019. The blue line is the actual production in a 5 minute resolution and the orange is the mean hourly production.
+The grafh below shows the renewable production for the 3. and 4. of april 2019. The blue line is the actual production in a 5 minute resolution and the orange is the mean hourly production.
 
 ![](figures/april-production-hour.png) 
 
-The graft visualizes the volatility of renewable production, within 12 hours the production fell from 2.500 MWh to 750 MWh or in other words, fell to 30%. 
+The grafh visualizes the volatility of renewable production, within 12 hours the production fell from 2.500 MWh to 750 MWh, or in other words fell to 30% of its peak. 
 
-Hourly resolution was chosen since it is what we currently have available for all of measurements points in Denmark through [the DataHub](datahub.md) and it being the market resolution.
+Hourly resolution was chosen since it is what we currently have available for all of measurement points in Denmark through [DataHub](datahub.md) and it being the current market resolution. Work is in progress to move it to a lower resolution in the future (15 or 5 minute)
 
-The Market resolution (in Denmark) is currently hourly, but it is work in progress to move it to a lower resolution in the future (15 or 5 minute)
+To enable higher resolution in the future, each GGO has both a **begin** and **end** timestamp. This way, when higher resolutions (15 min) becomes available, four GGOs are issued instead of a single for each hour, with the corresponding begin and end time.
 
-To enable higher resolution in the future, each GGO has both a **begin** and **end** date-time. This way, when higher resolutions (15 min) becomes available, four GGOs are issued instead of a single for each hour, with the corresponding begin and end time.
-
-The dates are in ISO-8601 format, the begin is inclusive and the end exclusive. Example: 
-
-    "begin": "2020-07-22T10:00:00Z"
-    "end": "2020-07-22T11:00:00Z"
-
-This will be interpreted as a single GGO for 1 hour where the next one will begin at the end of the previous one.
+The dates are in ISO-8601 format, the begin is inclusive and the end exclusive. This will be interpreted as a single GGO for 1 hour where the next one will begin at the end of the previous one.
 
 ### Amount
 
