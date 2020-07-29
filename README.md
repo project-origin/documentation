@@ -30,20 +30,8 @@ Sign up is open for everyone at [Eloprindelse.dk](https://eloprindelse.dk).
   - [Architectural overview](architecture.md)
   - [Blockchain protocols and implementation](blockchain-protocols.md)
 
-# Eloprindelse
-
-```diff
-- Forstår ikke lige helt det første paragraf i det her afsnit. Har flytet de andre paragraffer op i første afsnit ovenfor.
-```
-
-This project is the basis for the active Danish prototype of the platform called [Eloprindelse](http://eloprindelse.dk). 
-
-The active prototype is currently scheduled to run until November 2020, where the goal is to learn and develop the prototype, and to harvest all the learned experiences into a possibly future production solution. 
-
-We welcome as many participants and feedback as possibly. We will do our best to incorporate feedback improves the prototype.
-
 # Cooperation
  
-This project is open source, and our wish is for everyone interested to be part of the project and platform.
+This project is open-source, and our wish is for everyone interested to be part of the project and platform.
 
 You are also welcome to fork it and use it for your own purposes, but we would hope you want to be a part of a common platform.
