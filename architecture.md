@@ -57,15 +57,15 @@ The extended key is also used to generate the corresponding addresses. More on t
 
 In Hyperledger Sawtooth it is possible to isolate different parts of a system in namespaces. The first three bytes of each address denotes the namespace. Currently the platform uses three namespaces: one for measurements, one for GGOs, and one for settlements.
 
-Each measurements has its address deterministically calculated based on a combination of the owners extended public child key and the measuring begin-timestamp. This coupled with the namespace enables us to know in advance where to place a GGO originating from a measurement; we calculate the same address, but in a different namespace. This way everyone can easily look up the production measurement which were the basis for an issued GGO. The same is done when calculating a settlement's addresse, only in this case the basis is a consumption measurement's address, but in the settlement namespace.
+Each measurement has its address deterministically calculated based on a combination of the owners extended public child key and the measuring begin-timestamp. This coupled with the namespace enables us to know in advance where to place a GGO originating from a measurement; we calculate the same address, but in a different namespace. This way everyone can easily look up the production measurement which were the basis for an issued GGO. The same is done when calculating a settlement's addresse, only in this case the basis is a consumption measurement's address, but in the settlement namespace.
 
 The GGO and Settlement namespaces both have references to the Measurement namespace; issued GGOs refer to the production measurement its based upon, and settlements refer to the consumption measurement they are settling on. The Measurement namespace does not have references to the other namespaces; this was done to isolate the functionality in the GGO part as much as possible, since the measurements could potentially e used for other things in the future.
 
 ## Measurements
 
-All measurements from electricity meters are written to the verifiable storage. These are used for either issuing GGOs (production) or to settle GGOs to a meter (consumption).
+Measurements from electricity meters are written to the verifiable storage. They are later used for either issuing GGOs (production) or to settle GGOs to a meter (consumption).
 
-Each measurements stores a series of key information. Below is an example formatted as json.
+Each measurement stores a series of key information. Below is an example of a formatted JSON body of a block:
 
     {
         "begin": "2020-07-22T10:00:00Z",
@@ -78,9 +78,9 @@ Each measurements stores a series of key information. Below is an example format
 
 ### Time-span - begin and end
 
-Each measurement has a begin and end in ISO-8601 format. 
+Each measurement has a begin and end timestamp in ISO-8601 format. 
 
-The reasoning behind having both a start and end, (start and duration was also an option) is that we can dynamically change the time-span of each measurement and GGO without having to change the underlying rules in the platform.
+The reasoning behind having both a start and end (start and duration was also an option) is that we can dynamically change the time-span of each measurement and GGO without having to change the underlying rules in the platform.
 
 More information can also be read in [GGO time-span](#ggo-time)
 
@@ -88,9 +88,7 @@ More information can also be read in [GGO time-span](#ggo-time)
 
 For geographical correlation we have added a sector. 
 
-Currently these sectors are defined as the price-area, in Denmark DK1 and DK2.
-
-But this could also be at a more granular level if there are congestion within a single price-area. 
+Currently sectors are defined as the price-area, in Denmark DK1 and DK2, but could also be at a more granular level if there are congestion within a single price-area. 
 
 This is why the word **"sector"** was chosen as not to predefine what it is.
 
@@ -102,15 +100,15 @@ This simply denotes if the amount of energy was produced and sent to the grid or
 
 ### Amount
 
-This is the amount of Wh consumed or produced in the time-span for the meter. This is always a whole number.
+This is the amount of Wh consumed or produced in the time-span for the meter. This is always a whole number (integer).
 
-### Meter-id GSRN
+### GSRN (Meter-id)
 
-The observant reader probably recognizes that there is no information on what GSRN the measurement comes from. If this information had been stored on the ledger hashed or not, there would be a possibility to do a correlation attack or to brute-force reverse the GSRN, and it is therefore not stored on the ledger itself.
+The observant reader probably recognizes that there is no information on what GSRN the measurement comes from. If this information had been stored on the ledger (hashed or not), there would be a possibility to do a correlation attack or to brute-force reverse the GSRN, hence it is not stored on the ledger itself.
 
-The owner can prove which GSRN it is by granting access to the DataHub service, which can return the list of addresses for the GSRN measurements.
+The owner can prove the originating GSRN of a measurement by granting access to DataHubService, which exposes the GSRN number for a measurement via the API.
 
-[An earlier concept](old.md#public-measurement) showed an example on how to do it in a encrypted stream of similar to an <a href='https://blog.iota.org/introducing-masked-authenticated-messaging-e55c1822d50e'>Restricted IOTA MAM streams</a>, but there is an issue in that GDPR and not being able to delete one's own data.
+[An earlier concept](old.md#public-measurement) showed an example on how to do it in a encrypted stream of similar to an <a href='https://blog.iota.org/introducing-masked-authenticated-messaging-e55c1822d50e'>Restricted IOTA MAM streams</a>, but there is an issue with GDPR and not being able to delete one's own data.
 
 
 ## GGO - Granular Guarantee of Origin
