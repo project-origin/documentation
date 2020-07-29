@@ -126,7 +126,13 @@ Below is an example of a formatted JSON body of a block:
         "sector": "DK1",
         "tech_type": "T020002",
         "fuel_type": "F01050100",
-        "next": null
+        "next": {   
+            "action": "SPLIT"
+            "addresses": [
+                "%address 1%",
+                "%address 2%"
+            ]
+        }
     }
 
 ### Origin
@@ -172,7 +178,7 @@ This is why the word **"sector"** was chosen as not to predefine what it is.
 
 ### tech_type and fuel_type
 
-Based on the work from <a href="https://www.aib-net.org/sites/default/files/assets/eecs/facts-sheets/AIB-2019-EECSFS-05%20EECS%20Rules%20Fact%20Sheet%2005%20-%20Types%20of%20Energy%20Inputs%20and%20Technologies%20-%20Release%207.7%20v5.pdf">AIB (Association of Issuing Bodies) fact 5</a> on technology and fuel codes, we use their codes to deduce the underlaying technology of a production meter when issuing GGOs. These are the same codes used in the current GO system. Their technology- and fuel-codes are already an established standard and is a verbose way to describe the origin of the electricity.
+Based on the work from <a href="https://www.aib-net.org/sites/default/files/assets/eecs/facts-sheets/AIB-2019-EECSFS-05%20EECS%20Rules%20Fact%20Sheet%2005%20-%20Types%20of%20Energy%20Inputs%20and%20Technologies%20-%20Release%207.7%20v5.pdf">AIB (Association of Issuing Bodies) fact 5</a> on technology and fuel codes, we use their codes to deduce the underlaying technology of a production meter when issuing GGOs. These are the same codes used in the current GO system. Their technology- and fuel-codes are already an established standard and is a verbose way of describing the origin of the electricity.
 
 Each GGO has a tech_type and fuel_type field appended to them:
 
@@ -183,23 +189,17 @@ Example of Offshore Wind Power:
 
 ### Next
 
-The field is used to describe what has happened with the GGO. 
+This field is used to describe what has happened with the GGO (or the current state, if you will).
 
-When this field is empty, then the GGO has not been used. 
+A value of null indicates that the GGO has not been used (ie. is pristine).
 
-When any action on the GGO is done, the field is set with an object. 
+When any action on the GGO is done, the field is set with an object. The action property can be one of three possible values: TRANSFER, SPLIT, or RETIRE - each denoting what sort of action was performed.
 
-The action field has 3 possibilities: TRANSFER, SPLIT or RETIRE each denoting what sort of action was performed.
+The addresses property contains a list of addresses on the ledger where the GGO was used:
 
-The addresses field points to the addresses where the GGO was used. On a transfer the list will always contain a single address pointing to the new address. On a split it will point to multiple address where the GGO was split to. On retire, it will point to the Settlement where it was used.
-
-    {   
-        "action": "SPLIT"
-        "addresses": [
-            "%address 1%",
-            "%address 2%"
-        ]
-    }
+- On a TRANSFER the list will always contain a single address pointing to the new address.
+- On a SPLIT it will point to multiple address where the GGO was split to.
+- On a RETIRE, it will point to the Settlement where it was used.
 
 ## Settlement
 
