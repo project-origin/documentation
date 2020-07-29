@@ -17,6 +17,13 @@ Key features of the prototype include:
 - Onboarding users via Eloverblik.dk to access their actual measurement data
 - Using a blockchain as ledger for public verifying data
 
+## Dig in
+
+- Background info on the project
+- Core decisions
+- Architectural Overview
+- Shared verifiable storage (blockchain)
+
 If you want some of the [Background info for the project it can be found here](background.md).
 
 Early in the project a series of [Core decisions](core-decisions.md) were made.
