@@ -21,14 +21,12 @@ Key features of the prototype include:
 
 - [Background info on the project](background.md)
 - [Core decisions made early](core-decisions.md)
-- [Architectural overview](architecture.md)
-- Shared verifiable storage (blockchain)
+- Prototype implementation
+  - [Architectural overview](architecture.md)
+  - Shared verifiable storage (blockchain)
+- Further possibilities
+- Limitations
 
-If you want some of the [Background info for the project it can be found here](background.md).
-
-Early in the project a series of [Core decisions](core-decisions.md) were made.
-
-You can find more about the [architecture here](architecture.md).
 
 # Eloprindelse
 
