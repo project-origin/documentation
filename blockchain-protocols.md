@@ -1,9 +1,18 @@
-# Content
 
-- [Ownership](#ownership)
-- [Namespace and addressing](#namespace-and-addressing)
 
 # Blockchain protocols and implementation
+
+## Content
+
+- [Ownership](#ownership)
+- [Introduction](#introduction)
+- [Namespace and addressing](#namespace-and-addressing)
+- [Measurement](#measurement)
+- [GGO](#ggo)
+- [Settlement](#settlement)
+- [Transaction Processors](#transaction-processors)
+
+## <a name="introduction"></a>Introduction
 
 The blockchain is the core part of the platform, where all measurements, GGOs, and Settlements are persisted and are publicly verifiable. Details on the reasoning behind using a blockchain [are explained here](blockchain.md).
 
@@ -21,7 +30,7 @@ All blocks on the ledger are signed with a private key for owners to be able to 
 
 The extended key is also used to generate the corresponding addresses. More on this in the [DataHub service]('TODO').
 
-## <a name="namespace-and-addressing"></a> Namespace and addressing
+## <a name="namespace-and-addressing"></a>Namespace and addressing
 
 In Hyperledger Sawtooth it is possible to isolate different parts of a system in namespaces. The first three bytes of each address denotes the namespace. Currently the platform uses three namespaces: one for measurements, one for GGOs, and one for settlements.
 
@@ -29,7 +38,7 @@ Each measurement has its address deterministically calculated based on a combina
 
 The GGO and Settlement namespaces both have references to the Measurement namespace; issued GGOs refer to the production measurement its based upon, and settlements refer to the consumption measurement they are settling on. The Measurement namespace does not have references to the other namespaces; this was done to isolate the functionality in the GGO part as much as possible, since the measurements could potentially e used for other things in the future.
 
-## Measurements
+## <a name="measurement"></a>Measurement
 
 Measurements from electricity meters are written to the verifiable storage. They are later used for either issuing GGOs (production) or to settle GGOs to a meter (consumption).
 
@@ -79,7 +88,7 @@ The owner can prove the originating GSRN of a measurement by granting access to 
 [An earlier concept](old.md#public-measurement) showed an example on how to do it in a encrypted stream of similar to an <a href='https://blog.iota.org/introducing-masked-authenticated-messaging-e55c1822d50e'>Restricted IOTA MAM streams</a>, but there is an issue with GDPR and not being able to delete one's own data.
 
 
-## GGO - Granular Guarantee of Origin
+## <a name="ggo"></a>GGO - Granular Guarantee of Origin
 
 Every GGO in the platform denotes the origin of an amount of electricity produced. Each GGO is issued with a reference to the production measurement its based upon.
 
@@ -169,7 +178,7 @@ The addresses property contains a list of addresses on the ledger where the GGO 
 - On a SPLIT it will point to multiple address where the GGO was split to.
 - On a RETIRE, it will point to the Settlement where it was used.
 
-## Settlement
+## <a name="settlement"></a>Settlement
 
 The Settlement object is the way we document which GGOs have been retired to a specific measurement.
 
@@ -201,7 +210,7 @@ Each part in the list represents a GGO retired to the measurement. When a GGO is
 
 The amount is included so that it is not necessary to read all GGO's addresses to calculate whether the total is larger than the measurement, since it is not allowed to retire more GGOs to a measurement than the amount of electricity consumed. Also, the amount has to match that of the originating GGO.
 
-## Transaction Processors
+## <a name="transaction-processors"></a>Transaction Processors
 
 For each action that can be performed on the ledger, a transaction processor is defined. The transactions we have defined for this platform is:
 
