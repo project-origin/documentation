@@ -35,9 +35,9 @@ Using Public Permissioned Blockchain allows the central parties to control the c
 
 ### Transactions fees
 
-As we are dealing with micro-transactions, there cannot be a fee on each transaction, since this would otherwise hinder the free movement of the GGOs. This directly limits what sort of blockchains can be used, since those based on PoW ([Proof-of-Work](https://en.wikipedia.org/wiki/Proof_of_work)) and transaction fees are no longer relevant options.
+As we are dealing with micro-transactions, there cannot be a fee on each transaction, since this would otherwise hinder the free movement of GGOs. This directly limits which blockchain technologies can be used, since those based on PoW ([Proof-of-Work](https://en.wikipedia.org/wiki/Proof_of_work)) and transaction fees are no longer relevant options.
 
-Using Public Permissioned Blockchain allows the use of other consensus algorithms that are less resource intensive, thus in turn removes the need of transactions fees.
+Using Public Permissioned Blockchain allows the use of other consensus algorithms that are less resource intensive, thus in turn removes the need for transactions fees.
 
 ### Anonymity
 
@@ -45,21 +45,15 @@ TODO
 
 ### Scaling
 
-Distributed ledgers is often sited as being resource intensive and has scaling issues. This depends heavily on the consensus algorithm and the sort of blockchain used.
+Distributed ledgers are often sited as being resource intensive and having scaling issues due to the sequential processing of transactions. This heavily depends on the consensus algorithm and underlying blockchain technology used.
 
-Permissionless blockchains often use proof-of-work or other resource expensive solutions to create consensus, and this coupled with no transaction fees being allowed significantly limits the available blockchains.
+Permissionless blockchains often use Proof-of-Work or other resource-expensive algorithms to optain consensus between nodes, and this coupled with no transaction fees being allowed significantly reduces the options available for choosing a blockchain backend.
 
-When looking at Denmark, we have 3.5 million metering points. Around 130.000 of these are production metering points. 
+When looking at Denmark, we have 3.5 million metering points. Around 130.000 of these are production metering points. Each of these will result in a measurement being published to the ledger every hour, and each production meter in a GGO as well on top of this. This makes 3.6 million transaction every hour, just to issue the measurements and GGOs.
 
-Each metering point will result in a measurement being published, and each production in a GGO as well. 
+As a minimum each GGO has to be split and retired to a measurement, each resulting in a minimum of further 2 transactions per metering point. This makes 10.8 million transaction every hour (or 3,000 per second).
 
-This makes 3.6 million transaction every hour, just to issue the GGOs and measurement data. 
-
-As a minimum each GGO has to be split and retired to a measurement, each resulting in a minimum of further 2 transactions per metering point.
-
-This makes 10.8 million transaction every hour or 3.000 transaction per second.
-
-When scaling this from Denmark to the EU we go from 3.5 million metering points to 350 million which would roughly equal to 300.000 tps, which is outside the scope of any known distributed ledger.
+When scaling this from Denmark to the EU we go from 3.5 million metering points to around 350 million which would roughly equal to 300.000 transactions per second, which is outside the scope of performance of any currently known blockchain technology.
 
 This highlights that we will have an issue handling all transactions on a ledger, and why moving these sort of transactions off-ledger seems like the logical step. 
 
