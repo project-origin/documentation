@@ -172,13 +172,11 @@ This is why the word **"sector"** was chosen as not to predefine what it is.
 
 ### tech_type and fuel_type
 
-Based on the work from <a href="https://www.aib-net.org/sites/default/files/assets/eecs/facts-sheets/AIB-2019-EECSFS-05%20EECS%20Rules%20Fact%20Sheet%2005%20-%20Types%20of%20Energy%20Inputs%20and%20Technologies%20-%20Release%207.7%20v5.pdf">AIB (Association of Issuing Bodies) fact 5</a> on technology and fuel codes, we use their codes as used in the GO system on the GGOs.
+Based on the work from <a href="https://www.aib-net.org/sites/default/files/assets/eecs/facts-sheets/AIB-2019-EECSFS-05%20EECS%20Rules%20Fact%20Sheet%2005%20-%20Types%20of%20Energy%20Inputs%20and%20Technologies%20-%20Release%207.7%20v5.pdf">AIB (Association of Issuing Bodies) fact 5</a> on technology and fuel codes, we use their codes to deduce the underlaying technology of a production meter when issuing GGOs. These are the same codes used in the current GO system. Their technology- and fuel-codes are already an established standard and is a verbose way to describe the origin of the electricity.
 
-Their tech and fuel codes are an already established standard and is a verbose way to describe the origin of the electricity.
+Each GGO has a tech_type and fuel_type field appended to them:
 
-Each single GGO has a tech_type and fuel_type field appended to them:
-
-Example: Offshore wind power.
+Example of Offshore Wind Power:
 
     "tech_type": "T020002"
     "fuel_type": "F01050100"
