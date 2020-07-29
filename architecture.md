@@ -20,18 +20,7 @@ architectural design
 
 **TODO List all repositories**
 
-Here we will outline an overview of the architecture.
-
-At the core of the platform is the [shared verifiable storage (blockchain)](blockchain-protocols.md). The blockchain is intended to be a common place where end-users can verify their GGOs. In this prototype, this is currently implemented using Hyperledger Sawtooth, but a replacement is already under way.
-
-In the Danish Setup there is a [DataHub Service](#datahub-service). The responsibility for this service is to bridge the danish DataHub and its measurements with the prototype, and add data to the verifiable storage. This could also be replaced with a decentralized solution to let meters write directly to the verifiable storage if a issuing body so wishes.
-
-Next public service is the [Account Service](#account-service), this was original an way to abstract away the complexity of dealing directly with the ledger, wallet and keys to a more friendly account API. But there are considerations about making it the central access entry-point to the platform. 
-
-OAuth2 is used for authorization, this enables the users to be able to delegate access to their data to third party clients.
-
-An example application has also been created, this application uses many of the APIs created in the Account and DataHub service, and enables a user to do basic functionality and visualization on top of their data available in the platform. But the goal is to have third-parties create rich end user applications on top of the platform.
-
+This document outlines the overall architecture of the implemented prototype platform.
 
 ![Archictechtural overview](figures/arch-overview.png)
 
@@ -44,6 +33,8 @@ TODO: Afhængighed fra ledger til "Public services" er forkert - pilene bør kun
 At the core of the platform is the blockchain. It is intended to be the single source of truth where end-users, third-parties, etc. can verify GGOs. In this prototype, it is currently implemented using Hyperledger Sawtooth, but a replacement is already under way.
 
 The blockchain is [detailed in this document ](blockchain-protocols.md).
+
+Furthermore, [a Python library](https://github.com/project-origin/ledger-sdk-python) has been developed to enable easy integration with blockchain.
 
 TODO describe Origin-Ledger-SDK.
 
@@ -82,6 +73,8 @@ Transfer agreements are proposed by one user, then later accepted or declined by
 The example application is open-source and both [the backend](https://github.com/project-origin/example-backend) and [the frontend](https://github.com/project-origin/example-frontend) can be found on GitHub.
 
 # <a id="account-service">Authorization</a>
+
+OAuth2 is used for authorization, this enables the users to be able to delegate access to their data to third party clients.
 
 TODO
 
