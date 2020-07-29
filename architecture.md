@@ -69,7 +69,13 @@ TODO LINK TIL SWAGGER DOCS
 
 # <a id="account-service">Example Application</a>
 
-TODO
+The example application was created to illustrate the use of the APIs exposed by DataHubService and AccountService, while at the same time enabling the participants of the prototype to interact with the system without implementing their own clients.
+
+Its interface allows users to set up GGO transfer agreements with other users, set up retiring of GGOs to their metering points, while also providing a visual overview of the user's current account balance of GGOs.
+
+Transfer agreements are proposed by one user, then later accepted or declined by the counterpart user. They last for a specific period of time, and during this period up to a agreed-upon number of GGOs (energy measured in Watt-Hours) is transferred between the users. The receiving user is able to retire the inbound GGOs to their metering points, or transfer them further to other users, thus acting as middle-men.
+
+The example application is open-source and both [the backend](https://github.com/project-origin/example-backend) and [the frontend](https://github.com/project-origin/example-frontend) can be found on GitHub.
 
 # <a id="account-service">Authorization</a>
 
