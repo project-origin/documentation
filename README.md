@@ -2,7 +2,7 @@
 
 Project Origin is an Energinet prototype-project with the goal of providing a way to prove the origin of consumed electricity. It uses the same resolution as the electricity market, currently hourly, instead of the yearly resolution used by the current Guarantee of Origin system (GO), hence we call it Granular Guarantee of Origin (GGO).
 
-The active prototype is currently scheduled to run until November 2020, where the goal is to learn and further develop the prototype, and to harvest all the learned experiences into a possibly future production solution. We welcome as many participants and feedback as possible and will do our best to incorporate feedback into improving the prototype as fast as possible.
+The active prototype is currently scheduled to run until November 2020, where the goal is to learn and further develop the prototype, and to harvest all the learned experiences into a possibly future production-ready solution. We welcome as many participants and feedback as possible and will do our best to incorporate feedback into improving the prototype as fast as possible.
 
 Key features of the prototype include:
 
