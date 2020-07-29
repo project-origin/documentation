@@ -1,20 +1,20 @@
 # Should we use blockchain
 
-Based on some of the explanation in the [Verifiable and trustworthy section](Trust.md) we began to look at if we should use a blockchain or not.
+Based on some of the explanation in the [Verifiable and trustworthy section](Trust.md) we began to look at whether we should use a blockchain or not.
 
 ## Flowchart on what to use
 
-One of the papers that stuck was the paper by Karl Wüst and Arthur Gervais, in their paper 
+One of the papers that stuck was the paper by Karl Wüst and Arthur Gervais. In their paper 
 [Do you need a Blockchain?](http://diyhpl.us/~bryan/papers2/bitcoin/Do%20you%20need%20a%20blockchain%3F%20-%202017.pdf) 
-they made a flowchart on the decision on if one should use a blockchain or not for ones solution.
+they made a flowchart on the decision if one should use a blockchain or not.
 
 ![](figures/should_i_use_blockchain.png) 
 
 Our first experience going though this was as follows:
 
 1. Do you need to store state? Yes, we want to store the measurements, GGOs and how they were used.
-2. Are there multiple writers? Yes (as of now, no, but we hope to expand the prototype to have multiple participating issuing bodies)
-3. Can you use an always online TTP (Trusted Third Party)? No, there currently is no known TTP that offers this sort of solution, and the [trust](trust.md) issues also arise again.
+2. Are there multiple writers? Yes (as of now, no, but we hope to expand the prototype to have multiple participating issuing bodies).
+3. Can you use an always online TTP (Trusted Third Party)? No, there currently is no known TTP that offers this sort of solution, and the [trust](trust.md) issues also arose again.
 4. Are all writers known? Yes, we cannot alow unknown entities to write data, how would we be able to trust any of the data.
 5. Are all writers trusted? No, (original assumption, more one this later) we cannot trust all parties writing to the ledger.
 6. Is public verifiability required? Yes, we want everyone to be able to verify their data.
@@ -23,15 +23,13 @@ Result: Public Permissioned Blockchain
 
 ## Thoughts
 
-There was a series of thoughts that also pointing toward Public Permissioned Blockchain if a blockchain was to be used.
+There were a series of thoughts that also pointing toward Public Permissioned Blockchain if a blockchain was to be used.
 
 ### Regulation
 
 One of the central places where this sort of platform deviates from how things are usually build on a blockchain is regulation.
 
-Laws will be enacted on a national or union level that would have to be enacted on the blockchain wether or not the participating end users agree.
-
-This will require that a collection of central parties has the ability to govern and enact laws on the platform, which removes a permissionless blockchain from the list of possibilities
+Laws will be enacted on a national or union level that would have to be enacted on the blockchain whether or not the participating end users agree. This will require that a collection of central parties has the ability to govern and enact laws on the platform, which removes a permissionless blockchain from the list of possibilities.
 
 Using Public Permissioned Blockchain allows the central parties to control the code running on the nodes, and can change the rules to reflect the laws enacted.
 
