@@ -4,10 +4,6 @@ Project Origin is an Energinet prototype-project with the goal of providing a wa
 
 The active prototype is currently scheduled to run until November 2020, where the goal is to learn and further develop the prototype, and to harvest all the learned experiences into a possibly future production solution. We welcome as many participants and feedback as possible and will do our best to incorporate feedback into improving the prototype as fast as possible.
 
-```diff
-- Tilføj link til signup (eloprindelse.dk)?
-```
-
 Key features of the prototype include:
 
 - Issuing of GGOs based on actual energy production
