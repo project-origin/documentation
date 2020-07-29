@@ -51,19 +51,15 @@ All blocks on the ledger are signed with a private key for owners to be able to 
 
 [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) (developed by the BitCoin community) enables us to deterministic create unique public/private keys for every single block. This prevents the public from correlate ownership of blocks on the ledger, thus increasing anonymity without hiding data in the block. BIP32 further enables us to give an extended public key to the party creating the blocks, so they can continuously create blocks where only the owner has write access over.
 
-The extended key is also used to generate the corresponding addresses. More on this in the [DataHub service]('TODO')
+The extended key is also used to generate the corresponding addresses. More on this in the [DataHub service]('TODO').
 
 ## Namespace and addressing
 
-On the Hyperledger Sawtooth blockchain, it is possibly to isolate different parts of a system in namespaces. The first three bytes of each address denotes this namespace. Currently the platform uses two namespaces, one for all measurements, and on relating to GGOs and settlements. 
+In Hyperledger Sawtooth it is possible to isolate different parts of a system in namespaces. The first three bytes of each address denotes the namespace. Currently the platform uses three namespaces: one for measurements, one for GGOs, and one for settlements.
 
-There is only references from the GGO namespace to the measurement namespace and not the other way. This was done to isolate the functionality in the GGO part as much as possibly, since the measurements could potentially in the future also be used for other things.
+Each measurements has its address deterministically calculated based on a combination of the owners extended public child key and the measuring begin-timestamp. This coupled with the namespace enables us to know in advance where to place a GGO originating from a measurement; we calculate the same address, but in a different namespace. This way everyone can easily look up the production measurement which were the basis for an issued GGO. The same is done when calculating a settlement's addresse, only in this case the basis is a consumption measurement's address, but in the settlement namespace.
 
-Each measurements has its address deterministically calculated based on the owners extended public child key and the begin. 
-
-This coupled with the namespace enables us to know in advance where to place a GGO originating from a measurement, we calculate the same address, but in a different namespace (replace the first 3 bytes). This way everyone can see which measurement was the basis for a production.
-
-The same is done for consumption measurements, but in a settlement namespace.
+The GGO and Settlement namespaces both have references to the Measurement namespace; issued GGOs refer to the production measurement its based upon, and settlements refer to the consumption measurement they are settling on. The Measurement namespace does not have references to the other namespaces; this was done to isolate the functionality in the GGO part as much as possible, since the measurements could potentially e used for other things in the future.
 
 ## Measurements
 
