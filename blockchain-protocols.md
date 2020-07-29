@@ -1,6 +1,6 @@
-
-
 # Blockchain protocols and implementation
+
+This document details the data structures, naming convetions and more used in the blockchain implementation.
 
 ## Content
 
