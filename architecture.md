@@ -131,9 +131,9 @@ Below is an example of a formatted JSON body of a block:
 
 ### Origin
 
-This field always contains an address on the ledger where this GGO originated. There is two difference types of GGO origin.
+This field always contains an address on the ledger where this GGO originated. There are two difference types of GGO origin.
 
-The first possibility is that the GGO was issued based on a production measurement. In this case the "origin" will contain the address of the measurement, and the amount, begin, end, and sector will always be equal to the values of the measurement.
+The first possibility is that the GGO was issued based on a production measurement. In this case the "origin" will contain the address of the measurement, and amount, begin, end, and sector will always be equal to those of the measurement.
 
 The second possibility is that the GGO is a result of another GGO being transferred or split into smaller GGOs. In this case the "origin" will contain the address of the parent GGO. If it is a transferred GGO, then amount, begin, end and sector must still be equal to its parent. If it is a split, then amount would be a smaller amount than its parent, but begin, end, and sector must be equal to its parent.
 
