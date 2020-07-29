@@ -39,9 +39,9 @@ TODO: Afhængighed fra ledger til "Public services" er forkert - pilene bør kun
 
 # <a id="datahub-service">DataHubService</a>
 
-This service is responsible for bridging the danish DataHub with the rest of the platform. DataHub exposes metering points and measurements from the danish consumers via an API, and DataHubService uses this to fetch data for the platform's users. It imports measurements from DataHub and publishes them to the blockchain while also issues GGOs to the blockchain for production meters.
+This service is responsible for bridging the danish DataHub with the rest of the platform. DataHub exposes metering points and measurements from the danish consumers via an API, and DataHubService uses this to fetch data for the platform's users. It imports measurements from DataHub and publishes them to the blockchain while at the same time issues GGOs to the blockchain for production meters.
 
-DataHubService is [open-source and can be found on GitHub.com](https://github.com/project-origin/datahub-service).
+DataHubService is [open-source and can be found on GitHub](https://github.com/project-origin/datahub-service).
 
 # <a id="account-service">Accounts service</a>
 
