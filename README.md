@@ -15,7 +15,7 @@ Key features of the prototype include:
 
 ## Participate in the prototype
 
-Sign up is open for everyone at [Eloprindelse.dk](https://eloprindelse.dk).
+Sign up is open for everyone to try the example application at [Eloprindelse.dk](https://eloprindelse.dk).
 
 ## Project documentation
 
@@ -29,6 +29,8 @@ Sign up is open for everyone at [Eloprindelse.dk](https://eloprindelse.dk).
 - Prototype implementation
   - [Architectural overview](architecture.md)
   - [Blockchain protocols and implementation](blockchain-protocols.md)
+- Third-party integration
+  - Setting up an API token
 
 # Cooperation
  
