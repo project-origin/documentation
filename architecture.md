@@ -51,6 +51,10 @@ DataHubService is [open-source and can be found on GitHub](https://github.com/pr
 
 This service was intended as a way to abstract away the complexity of dealing directly with the blockchain, wallet, and keys to a more friendly account-oriented API. It keeps balance of GGOs and their state, while also exposing a number of endpoints to transfer GGOs to other accounts, and retire GGOs to measurements. Effectively AccountService has a copy of the GGOs on the blockchain to be able to index them for querying and other practical use-cases.
 
+The the complexity of dealing with asynchronous transactions on a blockchain is dealth with in AccountService, thus enabling much more pragmatic approaches to integrating with the platform's APIs.
+
+AccountService also exposes endpoints to generate an environment declaration with detailed emission data and source technology based on account's actual consumption and GGOs.
+
 # <a id="account-service">Example Application</a>
 
 TODO
