@@ -83,15 +83,11 @@ When we then revisit the flowchart (above) and go through it again with these le
 
 At point 5: Are all writers trusted? We can now answer yes.
 
-This result is telling us we should not use a blockchain. Using another implementation than a blockchain also helps with the scalability issues mentioned earlier.
+This result is telling us we should not use a blockchain. Using another technology than a blockchain also helps with the scalability issues mentioned earlier.
 
-# Current chose
+# Current choice
 
-Earlier in the process we chose to use a Public Permissioned Blockchain.
-
-The chose was Hyperledger Sawtooth since it provided the needed functionality for the prototype.
-
-Even though we already knew it would not scale to the necessary size needed, not event for Denmark.
+Early in the process we chose to use a Public Permissioned Blockchain. The choice was Hyperledger Sawtooth since it provided the needed functionality for the prototype even though we already knew it would not scale to the necessary size needed, not event for Denmark.
 
 It is currently work in progress to move to a off ledger solution while still providing the verifiability.
 
