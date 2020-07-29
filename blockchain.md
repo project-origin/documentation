@@ -47,7 +47,7 @@ TODO
 
 Distributed ledgers are often sited as being resource intensive and having scaling issues due to the sequential processing of transactions. This heavily depends on the consensus algorithm and underlying blockchain technology used.
 
-Permissionless blockchains often use Proof-of-Work or other resource-intensive algorithms to optain consensus between nodes, and this coupled with no transaction fees being allowed significantly reduces the options available for choosing a blockchain backend.
+Permissionless blockchains often use Proof-of-Work or other resource-intensive algorithms to optain consensus between nodes, and this coupled with transaction fees being out of question significantly reduces the options available for choosing a blockchain backend.
 
 When looking at Denmark, we have 3.5 million metering points. Around 130.000 of these are production metering points. Each of these will result in a measurement being published to the ledger every hour, and each production meter in a GGO as well on top of this. This makes 3.6 million transaction every hour, just to issue the measurements and GGOs.
 
