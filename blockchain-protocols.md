@@ -261,3 +261,5 @@ This transactions creates or updates a settlement for a corresponding consumptio
 ## <a name="python-sdk">Python SDK</a>
 
 A Python library has been develop to enable easy integration with the project's blockchain. It wraps Hyperledger Sawtooth's HTTP API with high-level objects to serialize requests and deserialize responses. This is the library used in the project internally, and can be [installed via Pip](https://pypi.org/project/Origin-Ledger-SDK/).
+
+The SDK is [open-source and can be found on GitHub](https://github.com/project-origin/ledger-sdk-python).
