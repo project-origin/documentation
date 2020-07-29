@@ -13,7 +13,7 @@ Key features of the prototype include:
 - Onboarding users via Eloverblik.dk to access their actual measurement data
 - Using a blockchain as ledger for public verifying data
 
-## Participating in the prototype
+## Participate in the prototype
 
 Sign up is open for everyone at [Eloprindelse.dk](https://eloprindelse.dk).
 
