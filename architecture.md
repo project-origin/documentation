@@ -43,6 +43,8 @@ This service is responsible for bridging the danish DataHub with the rest of the
 
 DataHubService also exposes a few API endpoints to fetch metering points, measurements, and GGOs, and to create publicly available disclosed datasets.
 
+To enable importing of data, users must onboard to DataHub via DataHubService. This process submits an authorization which allows DataHubService to import data for a consumer thus make it available to the rest of the platform.
+
 DataHubService is [open-source and can be found on GitHub](https://github.com/project-origin/datahub-service).
 
 # <a id="account-service">Accounts service</a>
