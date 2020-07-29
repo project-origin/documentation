@@ -4,8 +4,8 @@
 
 ## Content
 
-- [Ownership](#ownership)
 - [Introduction](#introduction)
+- [Ownership](#ownership)
 - [Namespace and addressing](#namespace-and-addressing)
 - [Measurement](#measurement)
 - [GGO](#ggo)
