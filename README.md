@@ -19,14 +19,15 @@ Key features of the prototype include:
 
 ## Project documentation
 
-- [Background info on the project](background.md)
-- [Core decisions made early](core-decisions.md)
+- Project background and considerations
+  - [Background info on the project](background.md)
+  - [Core decisions made early](core-decisions.md)
+  - [Should we use blockchain?](blockchain.md)
+  - Further possibilities
+  - Limitations
 - Prototype implementation
   - [Architectural overview](architecture.md)
-  - Shared verifiable storage (blockchain)
-- Further possibilities
-- Limitations
-
+  - Shared verifiable storage (blockchain) protocols
 
 # Eloprindelse
 
