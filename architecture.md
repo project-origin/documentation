@@ -140,7 +140,7 @@ The second possibility is that the GGO is a result of another GGO being transfer
 It is possible to distinguish between these two possibilities by looking at the namespace of the origin.
 
 ### <a id="ggo-time">Begin and End</a>
-In Project Origin we chose each GGOs to have a predetermined length of time (Market resolution) instead of a predetermined size (GO 1 MWh).
+In Project Origin we chose each GGO to have a predetermined length of time (Market resolution) instead of a predetermined size (GO 1 MWh).
 
 The reasoning behind locking the length of each GGO is that electricity is volatile and only exists while it is produced, temporal correlation between production and consumption is therefore of high importance.
 
@@ -160,25 +160,15 @@ The dates are in ISO-8601 format, the begin is inclusive and the end exclusive. 
 
 We want to be as granular as our data will allow, and since we measure all meters in watt-hour, this is also what we will issue all GGOs on. 
 
-The amount on each GGO is therefore in watt-hour and is an whole integer number.
-
-Example: a GGO containing 1419 watt-hour
-
-    "amount": 1419
+The amount on each GGO is therefore in watt-hour and is an whole number (integer).
 
 ### Sector
 
-For geographical correlation we have added a sector to each GGO. 
+For geographical correlation we have added a sector to each GGO. This is the sector in which the energy producing meter is physically located.
 
-Currently these sectors are defined as the price-area, in Denmark DK1 and DK2.
+Currently sectors are defined as the price-area, in Denmark DK1 and DK2, but could also be at a more granular level if there are congestion within a single price-area.
 
-But this could also be at a more granular level if there are congestion within a single price-area. 
-
-This is why the word **sector** was chosen as not to predefine the limit.
-
-Example:
-
-    "sector": "DK1"
+This is why the word **"sector"** was chosen as not to predefine what it is.
 
 ### tech_type and fuel_type
 
