@@ -9,9 +9,10 @@ TODO describe Origin-Ledger-SDK.
 - [Introduction](#introduction)
 - [Ownership](#ownership)
 - [Namespace and addressing](#namespace-and-addressing)
-- [Measurement](#measurement)
-- [GGO](#ggo)
-- [Settlement](#settlement)
+- Models
+  - [Measurement](#measurement)
+  - [GGO](#ggo)
+  - [Settlement](#settlement)
 - [Transaction Processors](#transaction-processors)
 - [Python SDK](#python-sdk)
 
