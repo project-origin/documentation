@@ -30,7 +30,7 @@ TODO: Afhængighed fra ledger til "Public services" er forkert - pilene bør kun
 
 At the core of the platform is the blockchain. It is intended to be the single source of truth where end-users, third-parties, etc. can verify GGOs. In this prototype, it is currently implemented using Hyperledger Sawtooth, but a replacement is already under way.
 
-The blockchain is [detailed in this document ](blockchain-protocols.md).
+The blockchain implementation is [detailed in this document ](blockchain-protocols.md).
 
 Furthermore, [a Python library](https://github.com/project-origin/ledger-sdk-python) has been developed to enable easy integration with the project's blockchain.
 
