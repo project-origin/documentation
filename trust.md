@@ -4,15 +4,13 @@ One of our goals was to make a verifiable and trustworthy way to prove the origi
 
 ## Distributed ledgers
 
-Distributed ledgers and blockchains are often mentioned as a way to create transparency and make data publicly verifiable, which in turn should make it trustworthy.
-
-Everything written on the ledger cannot be changed without everyone knowing it, and depending on the setup, can very transparent in what is happening and how to verify it.
+Distributed ledgers and blockchains are often mentioned as a way to create transparency and make data publicly verifiable, which in turn should make it trustworthy. Data written on the ledger cannot be changed without everyone knowing it, and depending on the setup, can be very transparent in what is happening and how to verify it.
 
 But there still is a central issue between integration the digital and physical world. 
 
-If a central authority like the DataHub is writing all the data, does a ledger make it more trustworthy? The data written to the ledger can still be incorrect.
+If a central authority like the danish DataHub is writing all the data, does a ledger make it more trustworthy? The data written to the ledger can still be incorrect.
 
-If decentralized meters are writing the data directly to the ledger, how do we trust that the meters? how can we trust that it is installed correctly? how can we trust it doesn't have a backdoor that enables data to be changed before writing it to the ledger?
+If decentralized meters are writing the data directly to the ledger, how do we trust the meters? How can we trust that it is installed correctly? How can we trust it does not have a backdoor that enables data to be changed before writing it to the ledger?
 
 ## Trust
 
