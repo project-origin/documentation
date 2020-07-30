@@ -40,7 +40,4 @@ Trust cannot be solely based on the ledger, the ledger is only as trustworthy as
 
 There are still a lot of unanswered questions around how we can establish the trust in this sort of system.
 
-To be able to continue the prototype, we chose to define the DataHub as a trusted source of data, 
-
-
-
+To be able to continue the prototype, we chose to define the DataHub as a trusted source of data.
