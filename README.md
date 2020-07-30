@@ -8,8 +8,8 @@ Key features of the prototype include:
 
 - Issuing of GGOs based on actual energy production
 - Setting up transfer agreements to [continuously] transfer issued GGOs to trading partners
-- Retiring of GGOs to prove the origin of consumed energy
-- Generating environment declaration based on retired GGOs, including detailed emission data and source technology
+- Retiring of GGOs to prove the origin of consumed electricity
+- Generating environmental declaration based on retired GGOs, including detailed emission data and source technologies
 - Onboarding users via Eloverblik.dk to access their actual measurement data
 - Using a blockchain as ledger for public verifying data
 
