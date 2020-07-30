@@ -68,6 +68,10 @@ Transfer agreements are proposed by one user, then later accepted or declined by
 
 The example application is open-source and both [the backend](https://github.com/project-origin/example-backend) and [the frontend](https://github.com/project-origin/example-frontend) can be found on GitHub.
 
+# <a id="energy-type-service">EnergyTypeService</a>
+
+TODO
+
 # <a id="account-service">Authorization</a>
 
 OAuth2 is used for authorization, this enables the users to be able to delegate access to their data to third party clients.
