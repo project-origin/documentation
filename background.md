@@ -44,16 +44,16 @@ In the EU we currently have a GO (Guarantee of Origin) system, which is defined 
 
 The current GO system locks the size of each GO at 1 MWh, so the owner of a facility can be issued a GO for every MWh the facility produces, but the start and end time of each GO can vary, it can be between hours to months.
 
-The electricity supplier who delivers renewable electricity, has to document they own the same number of GOs as the number of MWh renewable electricity they sell. The GO must have been issued within the year they are documenting the electricity for, but no further correlation in time is needed.
+The electricity supplier who delivers renewable electricity, has to document they own the same number of GOs as the number of MWh renewable electricity they sell. The GO must have been issued within the year they are documenting the electricity for, but no further correlation in time is required.
 
 
 ## Granular Guarantees of Origin
 
-As described above, the current GO system locks the size of each GO to 1 MWh and has a variable time-span. The GGO system created in Project Origin switches this, we lock the time-span to the market resolution (hourly) and put the discrete amount on the GGO in Wh produced in the time-span.
+As described above, the current GO system locks the size of each GO to 1 MWh and has a variable time-span. The GGO system created in Project Origin replaces this with the time-span of the market resolution (hourly) and put the discrete amount on the GGO in Wh produced in the time-span.
 
 The reasoning behind this is that electricity has to be used at the same time as it is created, it can not be stored in the grid, as pressure in a pipe. And when you on top of this add that the production of renewable energy fluctuates a lot as the weather changes, we have to look at what can be done.
 
-The best way we found to visualize some of this is with the grafts below. 
+The best way we found to visualize some of this is with the graphs below. 
 
 The blue line represents the sum of renewable production in a 5 minute resolution for all of Denmark in 2019.
 
@@ -63,7 +63,7 @@ As we go closer to real time, this deviation becomes smaller, and on an hourly l
  
 ![](figures/2019-production.png) 
 
-When taking a closer look at the production for two days with hourly mean production on can still se that the system isn't perfect, but is far more precise that what we currently use. 
+When taking a closer look at the production for two days with hourly mean production on can still se that the system is not perfect, but is far more precise than the currently used yearly resolution. 
 
 ![](figures/april-production-hour.png) 
 
@@ -72,8 +72,8 @@ When taking a closer look at the production for two days with hourly mean produc
 
 Project Origin is not a fully fledged solution, but a learning vehicle to explorer the problem space. It is an experimental platform to build different proposed solutions upon, where it is easy to try different solutions to some of the technical issues, while market actors can try how these technical solutions could work in the real world.
 
-Project Origin has been released in Denmark as an experiment with production data as a system called <a href="https://eloprindelse.dk/">Eloprindelse (Origin of electricity)</a> Users who want to participate can do so on an opt-in basis, and it is important to note that the entire prototype is one large **"Monopoly game"** in that none of the GGOs issued on it has any value, or proves any actual guarantees.
+Project Origin has been released in Denmark as an experiment with production data as a system called <a href="https://eloprindelse.dk/">Eloprindelse (Origin of electricity)</a>. Users who want to participate can do so on an opt-in basis, and it is important to note that the entire prototype is one large **"Monopoly game"** in that none of the GGOs issued on it has any value, or proves any actual guarantees.
 
 
-In is important to note that the GOs and GGOs both is a documented claim on electricity, it relates to who can claim to use the electricity produced at some facility. But the actual flow of electrons can be very different from this.
+In is important to note that the GOs and GGOs are both documented claim on electricity. It relates to who can claim to use the electricity produced at some facility. But the actual flow of electrons can be very different from this.
 
