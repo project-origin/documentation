@@ -1,21 +1,4 @@
 
-
-
-<!-- Background
-Base design goals
-
-architectural design
-- blockchain
-- distributed setup
-- wallets
-- measurements
-- ggo
-
-- account service
-- architectural view -->
-
-
-
 # Architectural Overview
 
 This document outlines the overall architecture of the implemented prototype platform.
@@ -24,7 +7,7 @@ This document outlines the overall architecture of the implemented prototype pla
 
 (Temp image)
 
-TODO: Afhængighed fra ledger til "Public services" er forkert - pilene bør kun pege fra services til ledger og ikke den anden vej rundt.
+<!-- TODO: Afhængighed fra ledger til "Public services" er forkert - pilene bør kun pege fra services til ledger og ikke den anden vej rundt. -->
 
 # <a id="datahub-service">Shared verifiable storage (blockchain)</a>
 
@@ -44,19 +27,19 @@ To enable importing of data, users must onboard to DataHub via DataHubService. T
 
 DataHubService is [open-source and can be found on GitHub](https://github.com/project-origin/datahub-service).
 
-TODO LINK TIL SWAGGER DOCS
+[Swagger API documentation](https://project-origin.github.io/swagger-ui/?swagger-file=https%3A%2F%2Fraw.githubusercontent.com%2Fproject-origin%2Fdatahub-service%2Fmaster%2Fdoc%2Fswagger.yml)
 
 # <a id="account-service">AccountService</a>
 
 This service was intended as a way to abstract away the complexity of dealing directly with the blockchain, wallet, and keys to a more friendly account-oriented API. It keeps balance of GGOs and their state, while also exposing a number of endpoints to transfer GGOs to other accounts, and retire GGOs to measurements. Effectively AccountService has a copy of the GGOs on the blockchain to be able to index them for querying and other practical use-cases.
 
-The complexity of dealing with asynchronous transactions on a blockchain is dealth with in AccountService, thus enabling much more pragmatic approaches to integrating with the platform's APIs.
+The complexity of dealing with asynchronous transactions on a blockchain is dealt with in AccountService, thus enabling much more pragmatic approaches to integrating with the platform's APIs.
 
 AccountService also exposes endpoints to generate an environment declaration with detailed emission data and source technologies based on the account's actual consumption and GGOs.
 
 AccountService is [open-source and can be found on GitHub](https://github.com/project-origin/account-service).
 
-TODO LINK TIL SWAGGER DOCS
+[Swagger API documentation](https://project-origin.github.io/swagger-ui/?swagger-file=https%3A%2F%2Fraw.githubusercontent.com%2Fproject-origin%2Faccount-service%2Fmaster%2Fdoc%2Fswagger.yml)
 
 # <a id="account-service">Example Application</a>
 
@@ -77,19 +60,3 @@ TODO
 OAuth2 is used for authorization, this enables the users to be able to delegate access to their data to third party clients.
 
 TODO
-
-<!-- 
-
-[Measurements](measurements.md)
-
-
-[GGO](ggo.md)
-
-
-
-
-- blockchain
-- distributed setup
-- wallets
-- measurements
-- ggo -->

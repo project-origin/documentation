@@ -32,7 +32,9 @@ All blocks on the ledger are signed with a private key for owners to be able to 
 
 [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) (developed by the BitCoin community) enables us to deterministic create unique public/private keys for every single block. This prevents the public from correlate ownership of blocks on the ledger, thus increasing anonymity without hiding data in the block. BIP32 further enables us to give an extended public key to the party creating the blocks, so they can continuously create blocks where only the owner has write access over.
 
-The extended key is also used to generate the corresponding addresses. More on this in the [DataHub service]('TODO').
+The extended key is also used to generate the corresponding addresses. The code for this can be found in the [DataHub service](https://github.com/project-origin/datahub-service).
+
+<!-- TODO: add actual address generation description -->
 
 ## <a name="namespace-and-addressing">Namespace and addressing</a>
 
@@ -204,9 +206,7 @@ Below is an example of a formatted JSON body of a block:
 
 ### Measurement
 
-This field is a reference to the consumption measurement, it is not needed strictly needed, since the measurement has the same address but in a different namespace.
-
-TODO Er det ikke "strictly needed"? Er der ikke nødvendigt for at transaction processoren accepterer transaktionen?
+This field is a reference to the consumption measurement, this field could be replace by a implicit reference, since the measurement has the same address but in a different namespace.
 
 ### Parts
 

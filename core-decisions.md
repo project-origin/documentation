@@ -49,11 +49,7 @@ GGOs will be used to settle the exact amount of electricity used on each meter. 
 
 In Denmark we settle and bill the metering points based on two virtual metering-points consumption (E17) and production (E18).
 
-```diff
-- Jeg forstår ikke meningen med starten af det her afsnit (ca op til første komma)?
-```
-
-The reason why we call these virtual is that calculations done on the physical meters are done, these calculations depends on the individual installation. But without going into deep explanation, the E17 and E18 are the actual amount consumed and produced, no matter how the individual installation is configured at the specific location.
+Without going into deep explanation, the E17 and E18 are the actual amount consumed and produced, no matter how the individual installation is configured at the specific location. The E17 and E18 is what the end customer is billed and settle upon. 
 
 We use these measurements as the basis for everything in this platform. These measurements are available on an hourly resolution for all of Denmark, and are available in Wh. And users can already access their data directly on [Eloverblik](https://eloverblik.dk/).
 

@@ -2,13 +2,13 @@
 
 
 ## Definitions
-In this document "renewable-fuels" will refer to "renewable liquid and gaseous transport fuels of non-biological origin"
+In this document "e-fuels" will refer to "renewable liquid and gaseous transport fuels of non-biological origin"
 
 ## RED II directive
 
-Project Origin arose in a brain storming session with Energinets Gas department (Energinet Gas TSO A/S), where we had to find a way to disclose renewable-fuels, the original issue arose with the RED II directive from the EU.
+Project Origin arose in a brain storming session with Energinets Gas department (Energinet Gas TSO A/S), where we had to find a way to disclose e-fuels, the original issue arose with the RED II directive from the EU.
 
-The EU commission with RED II directive communicates that for renewable-fuels to be classified as renewable, the issuing bodies must be able to document that the electricity used for the creation of the fuel was renewable.
+The EU commission with RED II directive communicates that for e-fuels to be classified as renewable, the issuing bodies must be able to document that the electricity used for the creation of the fuel was renewable.
 
 There is three outlined solutions in the <a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L2001'> RED II directive in Article 27</a>:
 
@@ -28,7 +28,7 @@ The directive further states: *"Renewable liquid and gaseous transport fuels of 
 
 ### TL;DR
 
-**The directive outlines that to be able to create renewable-fuels, one is required to be able to document that renewable electricity is used only once and that there must be a correlation in time between production and use of the electricity, and that there must not be a congestion between the production and consumption sites.**
+**The directive outlines that to be able to create e-fuels, one is required to be able to document that renewable electricity is used only once and that there must be a correlation in time between production and use of the electricity, and that there must not be a congestion between the production and consumption sites.**
 
 ## Our solution
 
@@ -36,7 +36,7 @@ Project Origin aims for the third solution by providing the necessary documentat
 
 Our take on RED II directive, is to use the marked resolution, in Denmark this is currently hourly, for time correlation, and to use the price-areas with inter-connectors to model the congestion areas.
 
-During the project we saw it not only benefits the production of renewable-fuels, but generally to document the use of electricity. Many companies want to have a green profile, and <a href='https://sustainability.google/projects/24x7/'>Google has a goal of using renewable energy matched on an hourly level.</a>
+During the project we saw it not only benefits the production of e-fuels, but generally to document the use of electricity. Many companies want to have a green profile, and <a href='https://sustainability.google/projects/24x7/'>Google has a goal of using renewable energy matched on an hourly level.</a>
 
 ## The GO system
 
