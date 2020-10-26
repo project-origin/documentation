@@ -3,11 +3,14 @@
 
 This document outlines the overall architecture of the implemented prototype platform.
 
-![Archictechtural overview](figures/arch-overview.png)
+<!-- ![Archictechtural overview](figures/arch-overview.png) -->
 
-(Temp image)
+<!-- (Temp image) -->
 
 <!-- TODO: Afhængighed fra ledger til "Public services" er forkert - pilene bør kun pege fra services til ledger og ikke den anden vej rundt. -->
+
+[Archictechtural overview](figures/architecture.drawio.png)
+
 
 # <a id="datahub-service">Shared verifiable storage (blockchain)</a>
 
