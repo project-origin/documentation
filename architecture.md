@@ -9,7 +9,7 @@ This document outlines the overall architecture of the implemented prototype pla
 
 <!-- TODO: Afhængighed fra ledger til "Public services" er forkert - pilene bør kun pege fra services til ledger og ikke den anden vej rundt. -->
 
-[Archictechtural overview](figures/architecture.drawio.png)
+![Archictechtural overview](figures/architecture.drawio.png)
 
 
 # <a id="datahub-service">Shared verifiable storage (blockchain)</a>
