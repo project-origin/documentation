@@ -15,7 +15,7 @@ Key features of the prototype include:
 
 ## Participate in the prototype
 
-Sign up is open for everyone to try the example application at [Eloprindelse.dk](https://eloprindelse.dk).
+Sign up is open for everyone to try the example application at [app.eloprindelse.dk](https://app.eloprindelse.dk).
 
 ## Project documentation
 
